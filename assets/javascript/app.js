@@ -12,7 +12,9 @@ $('#search').on('click', function() {
 			term = $('#searchTerm').val().trim();
 			inputBegin = $('#start').val().trim();
 			inputEnd = $('#end').val().trim();
-			number = 10;
+			number = $('input[name=radioName]:checked', '#myForm').val();
+
+			console.log($('input[name=radioName]:checked', '#myForm').val())
 
 			displayResults();
 });
@@ -30,6 +32,7 @@ function displayResults() {
 	  'q': term,
 	  'begin_date': inputBegin,
 	  'end_date': inputEnd,
+	  'page': number
 	});
 	$.ajax({
 	  url: url,
@@ -38,6 +41,7 @@ function displayResults() {
 	  console.log(result);
 
 	 for (var i = 0; i < number; i++) {
+
 	 		var title = $('<h1>');
 	 		title.text(result.response.docs[i].headline.main);
 	 		var description = $('<p>');
