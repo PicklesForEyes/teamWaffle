@@ -14,9 +14,10 @@ $('#search').on('click', function() {
 			inputBegin = $('#start').val();
 			inputEnd = $('#end').val();
 			number = $('#records').val();
-
 			displayResults();
-})
+});
+
+
 
 
 
@@ -52,6 +53,6 @@ function displayResults() {
 	});
 
 }
-
+displayResults();
 
 
