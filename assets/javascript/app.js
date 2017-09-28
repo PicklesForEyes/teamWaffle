@@ -1,22 +1,22 @@
+$(document).ready(function() {
+
 var term;
 var inputBegin;
 var inputEnd;
 var number;
 
-$('#clear').on('click', function(){
+  $('#clear').on('click', function(){
 		$('#results-div').empty();
-})
+  })
 
-$('#search').on('click', function() {
-
+  $('#search').on('click', function(event) {
+      event.preventDefault();
 			term = $('#searchTerm').val().trim();
 			inputBegin = $('#start').val().trim();
 			inputEnd = $('#end').val().trim();
-			number = $('input[name=radioName]:checked', '#myForm').val();
+      number = $('#selectId').val();
 
-			console.log($('input[name=radioName]:checked', '#myForm').val())
-
-			displayResults();
+      displayResults();
 });
 
 
@@ -26,8 +26,8 @@ $('#search').on('click', function() {
 
 
 function displayResults() {
-	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-	url += '?' + $.param({
+	var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    queryUrl += '?' + $.param({
 	  'api-key': "d64907f7906d46f2a3c6713b0ff7f5ec",
 	  'q': term,
 	  'begin_date': inputBegin,
@@ -35,7 +35,7 @@ function displayResults() {
 	  'page': number
 	});
 	$.ajax({
-	  url: url,
+	  url: queryUrl,
 	  method: 'GET',
 	}).done(function(result) {
 	  console.log(result);
@@ -51,6 +51,7 @@ function displayResults() {
 	 		$('#results-div').append(divArticle);
 	 		console.log(result.response.docs[i].headline.main);
 	 		console.log(result.response.docs[i].snippet);
+      // console.log(divArticle);
 	 }
 
 
@@ -60,5 +61,6 @@ function displayResults() {
 
 }
 
+})
 
 
