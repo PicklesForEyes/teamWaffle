@@ -1,6 +1,12 @@
+
+
 var term;
 var inputBegin;
 var inputEnd;
+
+term = $('#search').val()
+inputBegin = $('#begin_date').val()
+inputEnd = $('#end_date').val()
 
 
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
