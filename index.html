@@ -8,6 +8,7 @@
 
 <body>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="assets/javascript/app.js"></script>
 
@@ -36,23 +37,46 @@
 * Understand what format the URL should look like to make an Article Call. (Hint: Use the API Console!!) -->
 
 <!-- * Experiment with console logging various fields.-->
+<div class="container">
+  <div class="jumbotron">
+    <h1>New York Times Search</h1>
+
 
 <form>
   <div class="form-group">
-    <label for="email">Search Term:</label>
-    <input type="email" class="form-control" id="email">
+    <label for="text">Search Term:</label>
+    <input type="text" class="form-control" id="searchTerm">
+  </div>
+<!--   <div class="form-group">
+    <label for="text">Number of records:</label>
+    <input type="text" class="form-control" id="records">
+  </div> -->
+<!--   <select name = "records">
+    <label for="text">Numer Of Records to Retreive</label>
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <input type="records" value="records">
+  </select>  -->
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Numer Of Records to Retreive
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">5</a>
+    <a class="dropdown-item" href="#">10</a>
+    <a class="dropdown-item" href="#">15</a>
+    <input type="records" value="records">
+
+  </div>
+</div> 
+  <div class="form-group">
+    <label for="text">Start Year:</label>
+    <input type="text" class="form-control" id="start">
   </div>
   <div class="form-group">
-    <label for="pwd">Number of records:</label>
-    <input type="password" class="form-control" id="pwd">
-  </div>
-  <div class="form-group">
-    <label for="pwd">Start Year:</label>
-    <input type="password" class="form-control" id="pwd">
-  </div>
-  <div class="form-group">
-    <label for="pwd">End Year:</label>
-    <input type="password" class="form-control" id="pwd">
+    <label for="text">End Year:</label>
+    <input type="text" class="form-control" id="end">
   </div>
 <!--   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>
@@ -67,6 +91,9 @@
 
 <!--// Search Button-->
 <!--// Clear Results-->
+
+  </div>
+</div>
 
 
 </body>
