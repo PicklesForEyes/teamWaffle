@@ -53,10 +53,10 @@
   </div> -->
   <p>Numer Of Records to Retreive</p>
   <select><!-- name = "records">-->
-    <label for="text">Numer Of Records to Retreive</label>
-    <option value="5">5</option>
-    <option value="10">10</option>
-    <option value="15">15</option>
+    <label for="text" id='records'>Numer Of Records to Retreive</label>
+    <option value="1">5</option>
+    <option value="5">10</option>
+    <option value="10">15</option>
 <!--     <input type="records" value="records">
  -->  </select> 
 <!--   <div class="dropdown">
@@ -81,9 +81,11 @@
 <!--   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>
   </div> -->
-  <button type="Search" class="btn btn-default">Search</button>
-  <button type="Clear" class="btn btn-default">Clear</button>
+  <button type="Search" class="btn btn-default" id='search'>Search</button>
+  <button type="Clear" class="btn btn-default" id='clear'>Clear</button>
 </form>
+
+<div id='results-div'></div>
 <!--// Search Term - text-->
 <!--// num of records - pulldown-->
 <!--// Start Year - text-->
