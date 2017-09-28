@@ -51,25 +51,17 @@
     <label for="text">Number of records:</label>
     <input type="text" class="form-control" id="records">
   </div> -->
-  <p>Numer Of Records to Retreive</p>
-  <select><!-- name = "records">-->
-    <label for="text">Numer Of Records to Retreive</label>
+<!--   <p>Numer Of Records to Retreive</p>
+ -->  
+  <label for="text">Number Of Records to Retreive</label>
+  <select id="records"><!-- name = "records">-->
+    
+    <option value="1">1</option>
     <option value="5">5</option>
     <option value="10">10</option>
-    <option value="15">15</option>
-<!--     <input type="records" value="records">
- -->  </select> 
-<!--   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Numer Of Records to Retreive
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">5</a>
-      <a class="dropdown-item" href="#">10</a>
-      <a class="dropdown-item" href="#">15</a>
-      <input type="records" value="records">
-    </div>
-  </div> --> 
+<!--     <input type="records" value="records"> -->
+  </select> 
+ 
   <div class="form-group">
     <label for="text">Start Year:</label>
     <input type="text" class="form-control" id="start">
@@ -81,13 +73,16 @@
 <!--   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>
   </div> -->
-  <button type="Search" class="btn btn-default">Search</button>
-  <button type="Clear" class="btn btn-default">Clear</button>
+  <button type="Search" class="btn btn-default" id="search">Search</button>
+  <button type="Clear" class="btn btn-default" id="clear">Clear</button>
 </form>
-<!--// Search Term - text-->
-<!--// num of records - pulldown-->
-<!--// Start Year - text-->
-<!--// End Year text-->
+
+<!-- results div
+ -->
+   <div id="results-div">
+<!--     <label for="text">Results:</label>
+ -->
+    </div>
 
 <!--// Search Button-->
 <!--// Clear Results-->
