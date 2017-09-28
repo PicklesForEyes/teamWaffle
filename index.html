@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>NYT Search</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
 
+  
 <!--   <button data-animal="cat">meow</button>
   <button data-animal="dog">woof</button>
   <button data-animal="bird">chirp</button>
@@ -37,53 +37,14 @@
 * Understand what format the URL should look like to make an Article Call. (Hint: Use the API Console!!) -->
 
 <!-- * Experiment with console logging various fields.-->
-<div class="container">
-  <div class="jumbotron">
-    <h1>New York Times Search</h1>
-
-
-<form>
-  <div class="form-group">
-    <label for="text">Search Term:</label>
-    <input type="text" class="form-control" id="searchTerm">
-  </div>
-<!--   <div class="form-group">
-    <label for="text">Number of records:</label>
-    <input type="text" class="form-control" id="records">
-  </div> -->
-  <p>Numer Of Records to Retreive</p>
-  <select><!-- name = "records">-->
-    <label for="text" id='records'>Numer Of Records to Retreive</label>
-    <option value="1">5</option>
-    <option value="5">10</option>
-    <option value="10">15</option>
-<!--     <input type="records" value="records">
- -->  </select> 
-<!--   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Numer Of Records to Retreive
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">5</a>
-      <a class="dropdown-item" href="#">10</a>
-      <a class="dropdown-item" href="#">15</a>
-      <input type="records" value="records">
-    </div>
-  </div> --> 
-  <div class="form-group">
-    <label for="text">Start Year:</label>
-    <input type="text" class="form-control" id="start">
-  </div>
-  <div class="form-group">
-    <label for="text">End Year:</label>
-    <input type="text" class="form-control" id="end">
-  </div>
-<!--   <div class="checkbox">
-    <label><input type="checkbox"> Remember me</label>
-  </div> -->
-  <button type="Search" class="btn btn-default" id='search'>Search</button>
-  <button type="Clear" class="btn btn-default" id='clear'>Clear</button>
-</form>
+<div class="input-group">
+  <input type="text" id="searchTerm" class="form-control" placeholder="Search for..." required>
+  <input type="text" id="start" class="form-control" placeholder="YYYYMMDD" required>
+  <input type="text" id="end" class="form-control" placeholder="YYYYMMDD" required>
+  <span class="input-group-btn">
+    <button id="search" class="btn btn-default" type="button">Search</button>
+  </span>
+</div>
 
 <div id='results-div'></div>
 <!--// Search Term - text-->
@@ -93,6 +54,10 @@
 
 <!--// Search Button-->
 <!--// Clear Results-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+
 
   </div>
 </div>
